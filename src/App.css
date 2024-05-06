@@ -1,0 +1,88 @@
+.App-container {
+  @apply flex flex-col justify-center items-center bg-cover bg-center h-screen;
+
+  gap: calc(5rem * var(--scale));
+
+  .title {
+    @apply text-[white]  font-semibold;
+    filter: drop-shadow(2px 2px 4px black);
+    font-size: calc(4rem * var(--scale));
+  }
+
+  .App {
+    @apply flex items-center justify-center w-full font-semibold;
+    padding-left: calc(10rem * var(--scale));
+    padding-right: calc(10rem * var(--scale));
+  }
+  .container-1,
+  .container-3 {
+    @apply flex flex-col justify-center items-center w-full relative;
+
+    gap: calc(2rem * var(--scale));
+    /* width: calc(50rem * var(--scale)); */
+    height: calc(40rem * var(--scale));
+  }
+
+  .arrow {
+    @apply h-auto text-[#0a1729];
+    filter: drop-shadow(0.5rem 0.5rem 1rem black);
+    transition: 0.5s ease;
+    min-width: calc(10rem * var(--scale));
+    margin-left: calc(2rem * var(--scale));
+    margin-right: calc(2rem * var(--scale));
+  }
+
+  .arrow:hover {
+    @apply text-[#0a1729];
+    filter: drop-shadow(0.5rem 0.5rem 1rem black);
+    min-width: calc(13rem * var(--scale));
+  }
+
+  .text-area-left,
+  .text-area-right {
+    @apply flex items-center justify-center rounded-[0.6rem] h-full w-full resize-none;
+    padding: calc(1.5rem * var(--scale));
+    outline: none;
+    font-size: calc(1.5rem * var(--scale));
+  }
+
+  .text-area-left {
+    @apply text-[white];
+
+    background: #0a17299d;
+    box-shadow: 5px 5px 60px black;
+  }
+
+  .text-area-right {
+    @apply text-[white];
+
+    background: #0a17299d;
+    box-shadow: 5px 5px 60px black;
+  }
+
+  .text-area-left::-webkit-scrollbar,
+  .text-area-right::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .copy-paste {
+    @apply text-[white] absolute cursor-pointer;
+    font-size: calc(2.8rem * var(--scale));
+    right: calc(1rem * var(--scale));
+    top: calc(1rem * var(--scale));
+  }
+
+  .trash-left,
+  .trash-right {
+    @apply absolute text-[#ec5959];
+
+    font-size: calc(2.8rem * var(--scale));
+  }
+
+  .trash-left,
+  .trash-right {
+    @apply cursor-pointer;
+    right: calc(1rem * var(--scale));
+    bottom: calc(1rem * var(--scale));
+  }
+}
